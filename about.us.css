@@ -1,0 +1,418 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fff3f3;
+  font-family: "Geist", sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ea5353;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #0a0a0a;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  color: #ea5353;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #0a0a0a;
+}
+
+/* ...existing code... */
+
+.navbar-btn-contact {
+  padding: 12px 20px;
+  background-color: #ea5353;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(234, 83, 83, 0.15);
+}
+
+.navbar-btn-contact:hover {
+  background-color: #d63e3e;
+  box-shadow: 0 4px 16px rgba(234, 83, 83, 0.25);
+}
+
+/* Mobile menu */
+.navbar-mobile {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+}
+
+.navbar-mobile.active {
+  display: block;
+}
+
+.navbar-mobile ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navbar-mobile li {
+  padding: 0.5rem 2rem;
+}
+
+.navbar-mobile a {
+  text-decoration: none;
+  color: #0a0a0a;
+  font-weight: 500;
+  display: block;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.navbar-mobile a:hover {
+  color: #ea5353;
+}
+
+/* Main content with navbar offset */
+.content {
+  margin-top: 80px;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+.inner-container {
+  width: 100%;
+  max-width: 1900px;
+}
+
+.main-title {
+  background-image: url(unique.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fef2f2;
+  padding: 5rem;
+  font-size: 48px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.who-are-we {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.5rem;
+  margin: 4rem 0;
+  padding: 0 2rem;
+}
+
+.who-are-we-column-2 {
+  width: 60%;
+  max-width: 800px;
+}
+
+.who-are-we-title {
+  color: #ea5353;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.who-are-we-subtitle {
+  font-size: 40px;
+  color: #0a0a0a;
+  font-weight: 500;
+  margin: 1rem;
+}
+
+.who-are-we-content {
+  line-height: 1.5;
+  font-weight: 700;
+  color: #0a0a0acc;
+  text-align: center;
+  font-size: 18px;
+  width: 100%;
+}
+
+.our-history {
+  display: flex;
+  margin: 10rem 2rem;
+  gap: 3rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.our-history > div:first-child {
+  flex: 1;
+  text-align: center;
+}
+
+.our-history > div:last-child {
+  flex: 1;
+}
+
+.history {
+  font-size: 48px;
+  font-weight: 100;
+  color: #0a0a0a;
+  margin-bottom: 2rem;
+}
+
+.our-history-image {
+  width: 100%;
+  max-width: 30rem;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.our-history-title {
+  font-size: 16px;
+  color: #0a0a0a;
+  padding: 2rem 1rem;
+}
+
+.history-paragraph {
+  padding: 10px;
+  font-family: "Geist", sans-serif;
+  line-height: 1.6;
+}
+
+.our-mission {
+  display: flex;
+  margin: 10rem 2rem;
+  gap: 6rem;
+  align-items: center;
+}
+
+.our-mission-body {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+.our-mission-title {
+  font-size: 36px;
+  color: #0a0a0a;
+}
+
+.our-mission-content {
+  font-size: 16px;
+  color: #0a0a0a;
+  margin: 2rem 0;
+  line-height: 1.6;
+}
+
+.our-mission-image {
+  width: 100%;
+  max-width: 30rem;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.our-mission-button {
+  border-color: #ea5353;
+  padding: 8px 16px;
+  background-color: #ea5353;
+  font-size: 14px;
+  color: #fef2f2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.our-mission-button:hover {
+  background-color: #d63e3e;
+}
+
+.our-value {
+  display: flex;
+  margin: 10rem 2rem;
+  gap: 5rem;
+  align-items: center;
+}
+
+.our-value-content {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+.our-value-title {
+  color: #0a0a0a;
+  font-size: 36px;
+  font-family: "Geist", sans-serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.our-value-content p {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #0a0a0a;
+}
+
+.our-value-image {
+  height: 400px;
+  width: 500px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.our-value-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #fef2f2;
+  background-color: #f99e0b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.our-value-button:hover {
+  background-color: #e8890a;
+}
+
+.our-vision {
+  display: flex;
+  margin: 10rem 2rem;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-vision-content {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+.our-vision-title {
+  font-size: 36px;
+  color: #0a0a0a;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.our-vision-content p {
+  font-size: 16px;
+  color: #0a0a0a;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.our-vision-button {
+  background-color: #ea5353;
+  color: #fef2f2;
+  border-radius: 5px;
+  border: none;
+  padding: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.our-vision-button:hover {
+  background-color: #d63e3e;
+}
+
+.our-vision-image {
+  height: 400px;
+  width: 500px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 4rem 0 0;
+  margin-top: 6rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive: stack button below menu on mobile */
+@media (max-width: 600px) {
+  .navbar-btn-contact {
+    width: 100%;
+    margin: 1rem 0 0 0;
+    font-size: 1.1rem;
+    border-radius: 8px;
+  }
+}
