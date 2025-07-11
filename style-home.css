@@ -1,0 +1,156 @@
+html body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.active {
+  background-color: rgb(223, 22, 22);
+}
+
+.link:link {
+  color: gray;
+  background-color: transparent;
+}
+
+.link:visited {
+  color: grey;
+}
+
+.link:hover {
+  color: rgb(223, 22, 22);
+  background-color: transparent;
+}
+
+.link:active {
+  color: grey;
+  background-color: transparent;
+}
+
+.button {
+  background-color: rgb(223, 22, 22);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: auto;
+  height: 2.6rem;
+  font-weight: bold;
+  padding: 13px;
+  transition-duration: 0.1s;
+  cursor: pointer;
+}
+
+.butlnk {
+  color: white;
+}
+
+.button:hover {
+  background-color: rgb(223, 137, 137);
+  color: white
+}
+
+.hero {
+  background-image: url(praise-worship-background-9sgs3eufdd0h0xy2.jpg);
+  width: 100vw;
+  height: fit-content;
+  padding: 0 0 3.5rem 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content {
+  width: 600px;
+  color: white;
+  text-align: left;
+  margin-left: 6rem;
+}
+
+.content {
+  border: none
+}
+
+.heroh1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.herop {
+  font-size: 1.25rem;
+}
+
+.welsec {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2rem;
+}
+
+.welcome {
+  width: 50vw;
+  height: fit-content;
+  background-color: rgb(243, 200, 135);
+  border-radius: 15px;
+  padding: 1rem;
+
+}
+
+.joinus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.more {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.aplace {
+  width: 20vw;
+  height: auto;
+  margin: 0 50px;
+  padding: 20px;
+  text-align: center;
+  background-color: bisque;
+}
+div
+.activ {
+  display: flex;
+  justify-content: space-around;
+}
+
+.reachout {
+  background-image: url(hand-1xwGUkJR.jfif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.endflex {
+  display: flex;
+}
+
+.endflexbutton {
+  width: 20vw;
+}
