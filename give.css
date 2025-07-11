@@ -1,0 +1,548 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(250, 225, 233);
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    sans-serif;
+  line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #ffffff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 1rem;
+}
+
+.navbar-logo-img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.navbar-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.navbar-logo-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.navbar-logo-subtitle {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  font-weight: 400;
+  margin: 0;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navbar-menu a:hover {
+  color: #e74c3c;
+}
+
+.navbar-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #e74c3c;
+  transition: width 0.3s ease;
+}
+
+.navbar-menu a:hover::after {
+  width: 100%;
+}
+
+.navbar-btn-contact {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.2);
+}
+
+.navbar-btn-contact:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.3);
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #2c3e50;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-toggle:hover {
+  color: #e74c3c;
+}
+
+.navbar-mobile {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 1rem 0;
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-mobile.active {
+  display: block;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.navbar-mobile ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-mobile li {
+  padding: 0.5rem 2rem;
+}
+
+.navbar-mobile a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+  display: block;
+  padding: 0.75rem 0;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.navbar-mobile a:hover {
+  color: #e74c3c;
+  padding-left: 1rem;
+}
+
+/* Main Content */
+main {
+  margin: 100px 5% 0 5%;
+  padding: 0 1rem;
+}
+
+.body-box {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Donation Information Box */
+.box1 {
+  background-color: rgb(238, 212, 221);
+  border-radius: 15px;
+  max-width: 1150px;
+  margin: 0 auto;
+  border-style: ridge;
+  border-width: 1px;
+  border-color: rgb(145, 143, 143);
+  overflow: hidden;
+}
+
+.box1-flex {
+  background-color: white;
+  margin: 0;
+  padding: 30px 20px 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.box1-flex > div {
+  flex: 1;
+  min-width: 300px;
+}
+
+#first-h3 {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.box1-flex h3 {
+  padding-left: 10px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(242, 239, 239);
+  margin: 0 0 0 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 1px;
+}
+
+.details2 {
+  background-color: rgb(242, 239, 239);
+  text-align: left;
+  margin: 0 10px 20px 0;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+#top-detail {
+  margin-top: 15px;
+}
+
+#buttom {
+  border-radius: 0 0 10px 10px;
+}
+
+#top {
+  border-radius: 10px 10px 0 0;
+  margin-top: 15px;
+}
+
+/* Ways to Give Cards */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 30px;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+}
+
+.item1,
+.item2,
+.item3 {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.item1:hover,
+.item2:hover,
+.item3:hover {
+  transform: translateY(-5px);
+}
+
+.item1 h3,
+.item2 h3,
+.item3 h3 {
+  margin: 1rem 0;
+  color: #333;
+}
+
+.item1 p,
+.item2 p,
+.item3 p {
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Scripture Card */
+#text-div {
+  background-color: rgb(244, 167, 180);
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 15px;
+  color: #333;
+}
+
+#text-div h2 {
+  margin-top: 1rem;
+  color: #2c1810;
+}
+
+/* Footer */
+footer {
+  background-color: rgb(50, 2, 2);
+  margin-top: 3rem;
+}
+
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  color: white;
+}
+
+.footer h4 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ea5353;
+}
+
+.footer li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+.footer ul {
+  padding: 0;
+}
+
+.footer3 input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer3 button {
+  background-color: #ea5353;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer3 button:hover {
+  background-color: #d63e3e;
+}
+
+.footer5 {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0 2rem;
+}
+
+/* Typography */
+#h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+#p-text {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: grey;
+  margin-bottom: 2rem;
+}
+
+.box1 h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 0.5rem;
+}
+
+.sub-text {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: grey;
+  margin-bottom: 2rem;
+}
+
+#donation {
+  line-height: 1.2;
+  padding: 15px 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-btn-contact {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-logo-text {
+    display: none;
+  }
+
+  .navbar-logo-img {
+    height: 35px;
+    width: 35px;
+  }
+
+  .navbar-container {
+    padding: 0 1rem;
+  }
+
+  main {
+    margin: 80px 2% 0 2%;
+    padding: 0 0.5rem;
+  }
+
+  .box1-flex {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .box1-flex > div {
+    min-width: auto;
+  }
+
+  .details {
+    margin: 0 0 1px 0;
+    padding: 8px 15px;
+  }
+
+  .details2 {
+    margin: 0 0 15px 0;
+    padding: 8px 15px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .item1,
+  .item2,
+  .item3 {
+    padding: 15px;
+  }
+
+  #text-div {
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .footer5 {
+    margin: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-container {
+    padding: 0.5rem 1rem;
+  }
+
+  main {
+    margin: 70px 1% 0 1%;
+    padding: 0 0.25rem;
+  }
+
+  .box1-flex {
+    padding: 15px 5px;
+  }
+
+  .details {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  .details2 {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  #text-div {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    padding: 0.5rem;
+  }
+}
+
+/* Tablet specific styles */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .item3 {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
+  main {
+    margin: 90px 3% 0 3%;
+  }
+}
