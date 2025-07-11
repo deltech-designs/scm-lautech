@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>About Us - SCM LAUTECH</title>
+    <link
+      rel="stylesheet"
+      href="about-us.css"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a
+          href="index.html"
+          class="navbar-logo"
+        >
+          <img
+            src="Logo.svg"
+            alt="SCM LAUTECH"
+            class="navbar-logo-img"
+          />
+          <div class="navbar-logo-text">
+            <span class="navbar-logo-title">SCM LAUTECH</span>
+            <span class="navbar-logo-subtitle">Student Christian Movement</span>
+          </div>
+        </a>
+        <ul class="navbar-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="#sermon">Sermons</a></li>
+          <li><a href="give.html">Give</a></li>
+        </ul>
+        <button class="navbar-btn-contact">Contact Us</button>
+        <button
+          class="navbar-toggle"
+          onclick="toggleMobileMenu()"
+        >
+          ☰
+        </button>
+      </div>
+      <div
+        class="navbar-mobile"
+        id="mobile-menu"
+      >
+        <ul>
+          <li>
+            <a
+              href="index.html"
+              onclick="closeMobileMenu()"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="about-us.html"
+              onclick="closeMobileMenu()"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="#sermon"
+              onclick="closeMobileMenu()"
+              >Sermons</a
+            >
+          </li>
+          <li>
+            <a
+              href="give.html"
+              onclick="closeMobileMenu()"
+              >Give</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+      <section class="container">
+        <div class="inner-container">
+          <div class="main-title">
+            <p>OUR MISSION, VISION AND VALUES</p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="who-are-we"
+        data-aos="fade-up"
+      >
+        <h6 class="who-are-we-title">Who Are We?</h6>
+        <div class="who-are-we-column-2">
+          <h1 class="who-are-we-subtitle">
+            A CHURCH FILLED WITH LOVE AND COMPASSION
+          </h1>
+          <p class="who-are-we-content">
+            We are a community bound together by God's love, committed to
+            supporting each other through life's journey. Our church exists to
+            provide a space where everyone, students, faculty, and families, can
+            experience the transforming power of God's grace. We believe in
+            serving others with compassion, uplifting each person's spirit, and
+            making a positive impact in our university and beyond.
+          </p>
+        </div>
+      </section>
+
+      <section class="our-history">
+        <div>
+          <h1 class="history">OUR HISTORY</h1>
+          <img
+            src="unique.jpg"
+            alt="Our History"
+            class="our-history-image"
+          />
+        </div>
+        <div>
+          <h2 class="our-history-title">
+            Building a Church That Reflects God's Love and Grace
+          </h2>
+          <p class="history-paragraph">
+            The Student Christian Movement (SCM) of Nigeria is the local
+            expression of the World Student Christian Federation (WSCF), a
+            Geneva-based non-governmental and non-profit making International
+            Student Christian Organisation with 1508 associated and affiliated
+            member Movement in 94 countries.
+          </p>
+          <p class="history-paragraph">
+            In early 1990s, Reverend Gomba F. Oyor, the National Travelling
+            Secretary for the Western Region, tasked Jolly Ekpe, a corper
+            Travelling Secretary based in Ife, with establishing an SCM chapter
+            at the newly founded Oyo State University of Technology (LAUTECH).
+          </p>
+          <p class="history-paragraph">
+            Ekpe was supported by students from the SCM branch at Obafemi
+            Awolowo University, including Prof. Olawale Olakunleyin. Within
+            three months, they successfully completed the assignment, and the
+            first SCM service at LAUTECH was held on January 13, 1991. Services
+            have since been held in three locations: RCCG Jesus House Isale
+            General with Bible Study held within campus, Mafowurosere
+            Cooperative Building.
+          </p>
+        </div>
+      </section>
+
+      <section class="our-mission">
+        <div class="our-mission-body">
+          <h1 class="our-mission-title">OUR MISSION</h1>
+          <p class="our-mission-content">
+            Read more about our mission to lift up the name of God
+          </p>
+          <button class="our-mission-button">OUR MISSION</button>
+        </div>
+        <div>
+          <img
+            src="unique.jpg"
+            alt="Our Mission"
+            class="our-mission-image"
+          />
+        </div>
+      </section>
+
+      <section class="our-value">
+        <img
+          src="unique.jpg"
+          alt="Our Values"
+          class="our-value-image"
+        />
+        <div class="our-value-content">
+          <h1 class="our-value-title">OUR VALUES</h1>
+          <p>
+            Discover the core values that define SCM LAUTECH. Explore more here
+          </p>
+          <button class="our-value-button">
+            OUR VALUES
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+              style="margin-left: 10px"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <section class="our-vision">
+        <div class="our-vision-content">
+          <h1 class="our-vision-title">OUR VISION</h1>
+          <p>
+            Discover our visions and what drives us at SCM LAUTECH. Learn more
+            here
+          </p>
+          <button class="our-vision-button">
+            OUR VISION
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+              style="margin-left: 10px"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              />
+            </svg>
+          </button>
+        </div>
+        <div>
+          <img
+            src="OUR VISION.jpg"
+            alt="Our Vision"
+            class="our-vision-image"
+          />
+        </div>
+      </section>
+    </div>
+
+    <!-- The Footer -->
+    <footer>
+      <div class="footer">
+        <div class="footer1">
+          <img
+            src="Logo.svg"
+            alt="Logo and Name"
+          />
+        </div>
+        <div class="footer2">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="#sermon">Sermons</a></li>
+            <li><a href="give.html">Give</a></li>
+          </ul>
+        </div>
+        <div class="footer3">
+          <h4>Subscribe to Our Newsletter</h4>
+          <p>Get the latest news from us by subscribing</p>
+          <input
+            type="text"
+            placeholder="Email Address"
+          />
+          <a href="#"><button>Subscribe</button></a>
+        </div>
+        <div class="footer4">
+          <h4>Connect With Us</h4>
+        </div>
+      </div>
+      <div class="footer5">
+        <hr />
+        Student Christian Movement - LAUTECH Branch 2025
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

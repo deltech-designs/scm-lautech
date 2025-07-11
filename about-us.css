@@ -8,18 +8,19 @@
 
 body {
   background-color: #fff3f3;
-  font-family: "Geist", sans-serif;
+  font-family: 'Geist', sans-serif;
 }
 
 /* Navbar Styles */
 .navbar {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 1rem 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
+  transition: all 0.3s ease;
 }
 
 .navbar-container {
@@ -31,6 +32,7 @@ body {
   padding: 0 2rem;
 }
 
+<<<<<<< HEAD:about.us.css
 /* .navbar-logo {
   font-size: 1.5rem;
   font-weight: 700;
@@ -48,23 +50,95 @@ body {
   gap: 10px;
   height: 20px;
   border-radius: 40px;
+=======
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 1rem;
+}
+
+.navbar-logo-img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.navbar-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.navbar-logo-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.navbar-logo-subtitle {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  font-weight: 400;
+  margin: 0;
+>>>>>>> e9783604be4450e749aca67c51969f9ff894d24c:about-us.css
 }
 
 .navbar-menu {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-menu a {
   text-decoration: none;
-  color: #0a0a0a;
+  color: #2c3e50;
   font-weight: 500;
+  font-size: 1rem;
   transition: color 0.3s ease;
+  position: relative;
 }
 
 .navbar-menu a:hover {
-  color: #ea5353;
+  color: #e74c3c;
+}
+
+.navbar-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #e74c3c;
+  transition: width 0.3s ease;
+}
+
+.navbar-menu a:hover::after {
+  width: 100%;
+}
+
+.navbar-btn-contact {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.2);
+}
+
+.navbar-btn-contact:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.3);
 }
 
 .navbar-toggle {
@@ -73,28 +147,13 @@ body {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #0a0a0a;
+  color: #2c3e50;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
 }
 
-/* ...existing code... */
-
-.navbar-btn-contact {
-  padding: 12px 20px;
-  background-color: #ea5353;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  margin-left: 1rem;
-  transition: background 0.3s, box-shadow 0.3s;
-  box-shadow: 0 2px 8px rgba(234, 83, 83, 0.15);
-}
-
-.navbar-btn-contact:hover {
-  background-color: #d63e3e;
-  box-shadow: 0 4px 16px rgba(234, 83, 83, 0.25);
+.navbar-toggle:hover {
+  color: #e74c3c;
 }
 
 /* Mobile menu */
@@ -104,18 +163,24 @@ body {
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   padding: 1rem 0;
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
 .navbar-mobile.active {
   display: block;
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .navbar-mobile ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .navbar-mobile li {
@@ -124,15 +189,17 @@ body {
 
 .navbar-mobile a {
   text-decoration: none;
-  color: #0a0a0a;
+  color: #2c3e50;
   font-weight: 500;
   display: block;
-  padding: 0.5rem 0;
-  transition: color 0.3s ease;
+  padding: 0.75rem 0;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #ecf0f1;
 }
 
 .navbar-mobile a:hover {
-  color: #ea5353;
+  color: #e74c3c;
+  padding-left: 1rem;
 }
 
 /* Main content with navbar offset */
@@ -241,7 +308,7 @@ body {
 
 .history-paragraph {
   padding: 10px;
-  font-family: "Geist", sans-serif;
+  font-family: 'Geist', sans-serif;
   line-height: 1.6;
 }
 
@@ -307,7 +374,7 @@ body {
 .our-value-title {
   color: #0a0a0a;
   font-size: 36px;
-  font-family: "Geist", sans-serif;
+  font-family: 'Geist', sans-serif;
   font-weight: 600;
   margin-bottom: 1rem;
 }
@@ -393,38 +460,247 @@ body {
   object-fit: cover;
 }
 
-/* Footer Styles */
-.footer {
-  background-color: #1a1a1a;
-  color: #fff;
-  padding: 4rem 0 0;
-  margin-top: 6rem;
+/* Footer */
+footer {
+  background-color: rgb(50, 2, 2);
+  margin-top: 3rem;
 }
 
-.footer-container {
+.footer {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.footer-content {
+  padding: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem;
-  margin-bottom: 3rem;
+  gap: 2rem;
+  color: white;
 }
 
-.footer-section {
-  display: flex;
-  flex-direction: column;
+.footer h4 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ea5353;
+}
+
+.footer li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+.footer ul {
+  padding: 0;
+}
+
+.footer3 input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer3 button {
+  background-color: #ea5353;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer3 button:hover {
+  background-color: #d63e3e;
+}
+
+.footer5 {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0 2rem;
 }
 
 /* Responsive: stack button below menu on mobile */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+
   .navbar-btn-contact {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-logo-text {
+    display: none;
+  }
+
+  .navbar-logo-img {
+    height: 35px;
+    width: 35px;
+  }
+
+  .navbar-container {
+    padding: 0 1rem;
+  }
+
+  .main-title {
+    font-size: 32px;
+    padding: 3rem 2rem;
+    height: 300px;
+  }
+
+  .who-are-we {
+    padding: 0 1rem;
+  }
+
+  .who-are-we-column-2 {
+    width: 90%;
+  }
+
+  .who-are-we-subtitle {
+    font-size: 28px;
+  }
+
+  .our-history {
+    flex-direction: column;
+    margin: 5rem 1rem;
+    gap: 2rem;
+  }
+
+  .our-history-image {
+    max-width: 100%;
+    height: 15rem;
+  }
+
+  .our-mission {
+    flex-direction: column;
+    margin: 5rem 1rem;
+    gap: 2rem;
+  }
+
+  .our-mission-image {
+    max-width: 100%;
+    height: 15rem;
+  }
+
+  .our-value {
+    flex-direction: column-reverse;
+    margin: 5rem 1rem;
+    gap: 2rem;
+  }
+
+  .our-value-image {
     width: 100%;
-    margin: 1rem 0 0 0;
-    font-size: 1.1rem;
-    border-radius: 8px;
+    height: 15rem;
+  }
+
+  .our-vision {
+    flex-direction: column;
+    margin: 5rem 1rem;
+    gap: 2rem;
+  }
+
+  .our-vision-image {
+    width: 100%;
+    height: 15rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .footer5 {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 24px;
+    padding: 2rem 1rem;
+    height: 250px;
+  }
+
+  .who-are-we-subtitle {
+    font-size: 24px;
+  }
+
+  .who-are-we-content {
+    font-size: 16px;
+  }
+
+  .our-history {
+    margin: 3rem 0.5rem;
+  }
+
+  .our-mission {
+    margin: 3rem 0.5rem;
+  }
+
+  .our-value {
+    margin: 3rem 0.5rem;
+  }
+
+  .our-vision {
+    margin: 3rem 0.5rem;
+  }
+
+  .history {
+    font-size: 32px;
+  }
+
+  .our-mission-title,
+  .our-value-title,
+  .our-vision-title {
+    font-size: 28px;
+  }
+}
+
+/* Tablet specific styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-title {
+    font-size: 40px;
+    padding: 4rem 3rem;
+    height: 350px;
+  }
+
+  .who-are-we-column-2 {
+    width: 80%;
+  }
+
+  .our-history {
+    margin: 8rem 1.5rem;
+  }
+
+  .our-mission {
+    margin: 8rem 1.5rem;
+  }
+
+  .our-value {
+    margin: 8rem 1.5rem;
+  }
+
+  .our-vision {
+    margin: 8rem 1.5rem;
   }
 }
