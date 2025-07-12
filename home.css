@@ -196,7 +196,13 @@ main {
 }
 
 .hero-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+  background:
+    linear-gradient(135deg, rgba(102, 126, 234, 0.95), rgba(118, 75, 162, 0.95)),
+    url('praise-worship-background-9sgs3eufdd0h0xy2.jpg');
+  background-size: cover;
+  background-position: center;
+
   color: white;
   padding: 6rem 2rem;
   text-align: center;
