@@ -142,7 +142,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 SCM LAUTECH. All rights reserved.</div>
+        <div>© <span id="date"></span> SCM LAUTECH. All rights reserved.</div>
         <div class="footer-links2">
           <a href="#privacy">Privacy Policy</a>
           <a href="#terms">Terms of Service</a>
@@ -150,5 +150,8 @@
       </div>
     </div>
   </footer>
+	<script>
+		document.getElementById("date").innerHTML = new Date().getFullYear()
+	</script>
 </body>
 </html>
