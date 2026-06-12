@@ -6,6 +6,8 @@
   <title>Give · SCM LAUTECH</title>
   <link rel="icon" href="assets/SCM LOGO.jpg">
   <link rel="stylesheet" href="Give.css">
+  <!-- AOS Library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body class="give-page">
   <header>
@@ -14,11 +16,17 @@
         <span class="brand-mark"> <img src="assets/SCM LOGO.jpg" alt="SCM LAUTECH Logo"></span>
         SCM LAUTECH
       </div>
-      <nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="navMenu">
         <a href="index.html">Home</a>
         <a href="About.html">About</a>
         <a href="Sermons.html">Sermons</a>
         <a href="Give.html" class="active">Give</a>
+        <a href="#" class="button button-primary nav-cta">Join Us</a>
       </nav>
       <button class="action-button">Join Us</button>
     </div>
@@ -31,7 +39,7 @@
         <img src="assets/Church.png" alt="Church interior background">
         <div class="give-hero-overlay"></div>
       </div>
-      <div class="container give-hero-inner">
+      <div class="container give-hero-inner" data-aos="fade-up">
         <span class="eyebrow">BEING A BLESSING</span>
         <h1>Giving to the Mandate</h1>
         <p>Your generosity aids the spread of the message of Christ on campus. That the abundance of your supply may be an abundance of thanksgiving unto God through us.</p>
@@ -40,7 +48,7 @@
 
     <section class="container give-grid-section">
       <div class="give-grid">
-        <article class="give-card give-form-card">
+        <article class="give-card give-form-card" data-aos="fade-right">
           <h2>Secure Giving</h2>
           <form class="give-form">
             <div class="form-row">
@@ -85,7 +93,7 @@
         </article>
 
         <div class="give-info-column">
-          <article class="give-card bank-card">
+          <article class="give-card bank-card" data-aos="fade-left" data-aos-delay="0">
             <h3>Bank Transfer</h3>
             <div class="bank-detail">
               <span class="bank-label">ACCOUNT NAME</span>
@@ -101,7 +109,7 @@
             </div>
           </article>
 
-          <article class="give-card impact-card">
+          <article class="give-card impact-card" data-aos="fade-left" data-aos-delay="100">
             <h3>Your Impact</h3>
             <div class="impact-item">
               <img src="assets/Student-Support.svg" alt="Student support icon">
@@ -118,10 +126,10 @@
 
     <section class="give-vision-section">
       <div class="container give-vision-grid">
-        <div class="vision-image">
+        <div class="vision-image" data-aos="fade-right">
           <img src="assets/Group-Image.png" alt="Group ministry photo">
         </div>
-        <div class="vision-copy">
+        <div class="vision-copy" data-aos="fade-left">
           <h2>Why We Give</h2>
           <p>"Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver." — 2 Corinthians 9:7</p>
           <p>At SCM LAUTECH, giving is an act of worship. It is our way of acknowledging God's sovereignty over our resources and our commitment to seeing His kingdom established in the hearts of students on this campus.</p>
@@ -144,5 +152,35 @@
       </div>
     </footer>
   </main>
+  <!-- AOS Library Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    if (menuToggle) {
+      menuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      // Close menu when a link is clicked
+      const navLinks = navMenu.querySelectorAll('a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          menuToggle.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
+    }
+
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100
+    });
+  </script>
 </body>
 </html>
