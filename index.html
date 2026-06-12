@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,6 +6,8 @@
   <title>SCM LAUTECH</title>
   <link rel="icon" href="assets/SCM LOGO.jpg">
   <link rel="stylesheet" href="Homepage.css">
+  <!-- AOS Library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
   <header>
@@ -14,11 +16,17 @@
         <span class="brand-mark"> <img src="assets/SCM LOGO.jpg" alt="SCM LAUTECH Logo"></span>
         SCM LAUTECH
       </div>
-      <nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="navMenu">
         <a href="index.html" class="active">Home</a>
         <a href="About.html">About</a>
         <a href="Sermons.html">Sermons</a>
         <a href="Give.html">Give</a>
+        <!-- <a href="#" class="button button-primary nav-cta">Join Us</a> -->
       </nav>
       <button class="action-button">Join Us</button>
     </div>
@@ -26,7 +34,7 @@
 
   <main>
     <section class="hero" id="home">
-      <div class="container hero-inner">
+      <div class="container hero-inner" data-aos="fade-up">
         <div class="hero-title">Where Faith Meets Campus Life</div>
         <p class="hero-copy">Discover a community of believers at LAUTECH dedicated to spiritual growth, academic excellence, and raising disciples for Christ.</p>
 
@@ -41,10 +49,10 @@
     <!-- extras -->
      <section class="bento-section">
 				<div class="container">
-					<h2 class="section-title">Living the Faith at LAUTECH</h2>
+					<h2 class="section-title" data-aos="fade-down">Living the Faith at LAUTECH</h2>
 
 					<div class="bento-grid">
-						<article class="card featured">
+						<article class="card featured" data-aos="zoom-in">
 							<img class="featured-img" src="assets/ChurchView.png" alt="Worship" />
 							<div class="overlay"></div>
 							<div class="featured-content">
@@ -54,7 +62,7 @@
 							</div>
 						</article>
 
-						<aside class="card info">
+						<aside class="card info" data-aos="flip-left">
 							<div class="icon-wrap">
 								<img src="assets/Bible-Icon.svg" alt="icon" />
 							</div>
@@ -62,7 +70,7 @@
 							<p>Deep dive into the Word of God with fellow students every Wednesday evening.</p>
 						</aside>
 
-						<aside class="card action">
+						<aside class="card action" data-aos="flip-right">
 							<h4>Need Prayer?</h4>
 							<p>Our intercessory team is always available to pray with you.</p>
 							<a class="link" href="#">Submit a request
@@ -74,13 +82,13 @@
 			</section>
 
     <section class="container">
-      <article class="highlight-card">
+      <article class="highlight-card" data-aos="slide-up">
         <h2>A Warm Welcome to SCM</h2>
         <p>Whether you are a freshman looking for direction or a returning student seeking fellowship with God and other believers, Student Christian Movement LAUTECH is your home away from home. We are a non-denominational community focused on raising Christ's disciples.</p>
       </article>
 
       <section class="features" aria-label="Event features">
-        <article class="feature-card">
+        <article class="feature-card" data-aos="fade-left">
           <img src="assets/Fellowship.png" alt="Fellowship">
             <span class="label">Fellowship</span>
             <h3>Sunday Fellowship</h3>
@@ -89,7 +97,7 @@
           </div>
         </article>
 
-        <article class="feature-card">
+        <article class="feature-card" data-aos="fade-up">
           <img src="assets/Bible Study.png" alt="Bible study">
             <span class="label">Bible Study</span>
             <h3>Teaching Meeting</h3>
@@ -98,7 +106,7 @@
           </div>
         </article>
 
-        <article class="feature-card">
+        <article class="feature-card" data-aos="fade-right">
           <img src="assets/Gathering.png" alt="Cell Gathering">
            <span class="label">Cell Gathering</span>
             <h3>Gathering in Small Groups</h3>
@@ -108,7 +116,7 @@
         </article>
       </section>
 
-      <section class="featured-message" id="sermons">
+      <section class="featured-message" id="sermons" data-aos="fade-up">
         <img src="assets/President.jpg" alt="Featured message">
         <div class="info">
           <span class="eyebrow">Featured Message</span>
@@ -143,7 +151,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© <span id="date"></span> SCM LAUTECH. All rights reserved.</div>
+        <div>© 2026 SCM LAUTECH. All rights reserved.</div>
         <div class="footer-links2">
           <a href="#privacy">Privacy Policy</a>
           <a href="#terms">Terms of Service</a>
@@ -151,8 +159,35 @@
       </div>
     </div>
   </footer>
-	<script>
-		document.getElementById("date").innerHTML = new Date().getFullYear()
-	</script>
+  <!-- AOS Library Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    if (menuToggle) {
+      menuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      // Close menu when a link is clicked
+      const navLinks = navMenu.querySelectorAll('a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          menuToggle.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
+    }
+
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100
+    });
+  </script>
 </body>
 </html>
