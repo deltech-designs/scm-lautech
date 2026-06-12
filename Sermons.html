@@ -6,6 +6,8 @@
   <title>Sermons · SCM LAUTECH</title>
   <link rel="icon" href="assets/SCM LOGO.jpg">
   <link rel="stylesheet" href="Homepage.css">
+  <!-- AOS Library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body class="sermons-page">
  <header>
@@ -14,11 +16,17 @@
         <span class="brand-mark"> <img src="assets/SCM LOGO.jpg" alt="SCM LAUTECH Logo"></span>
         SCM LAUTECH
       </div>
-      <nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="navMenu">
         <a href="index.html">Home</a>
         <a href="About.html">About</a>
         <a href="Sermons.html" class="active">Sermons</a>
         <a href="Give.html">Give</a>
+        <!-- <a href="#" class="button button-primary nav-cta">Join Us</a> -->
       </nav>
       <button class="action-button">Join Us</button>
     </div>
@@ -27,12 +35,12 @@
 
   <main>
     <section class="sermons-hero">
-      <div class="container hero-inner2">
+      <div class="container hero-inner2" data-aos="fade-up">
         <span class="eyebrow">SPIRITUAL NOURISHMENT</span>
         <h1 class="hero-title2">Latest Teachings &amp; Sermons</h1>
         <p class="hero-copy2">Explore our archive of bible teachings designed to illuminate your <br>spiritual journey and help you grow in the faith.</p>
       </div>
-      <div class="container hero-search">
+      <div class="container hero-search" data-aos="zoom-in">
         <div class="search-field">
           <input type="search" placeholder="Search sermons..." aria-label="Search sermons">
           <span class="search-icon"><img src="assets/Search.svg" alt="Search icon"></span>
@@ -44,7 +52,7 @@
 
     <section class="container sermons-featured">
       <div class="featured-grid">
-        <article class="featured-card">
+        <article class="featured-card" data-aos="fade-right">
           <div class="featured-media">
             <img src="assets/Featured Sermon.png" alt="Featured sermon">
             <div class="featured-overlay"></div>
@@ -66,12 +74,12 @@
         </article>
 
         <aside class="sermon-sidebar">
-          <div class="sidebar-card sidebar-cta">
+          <div class="sidebar-card sidebar-cta" data-aos="fade-left">
             <h3>Join our Weekly Fellowship</h3>
             <p>Experience the power of God in person every Sunday &amp; Wednesday at the SCM House.</p>
             <a href="#" class="button button-primary button-block">View Schedule</a>
           </div>
-          <div class="sidebar-card sidebar-podcast">
+          <div class="sidebar-card sidebar-podcast" data-aos="fade-left" data-aos-delay="100">
             <h3>Podcast</h3>
             <p>Download and listen on the go. Now available on Telegram and WhatsApp Platforms.</p>
             <div class="podcast-icons">
@@ -94,7 +102,7 @@
       </div>
 
       <div class="sermon-cards-grid">
-        <article class="sermon-card">
+        <article class="sermon-card" data-aos="fade-up" data-aos-delay="0">
           <div class="sermon-thumbnail">
             <img src="assets/Sermon-Thumbnail.png" alt="Sermon thumbnail">
           </div>
@@ -112,7 +120,7 @@
           </div>
         </article>
 
-        <article class="sermon-card">
+        <article class="sermon-card" data-aos="fade-up" data-aos-delay="100">
           <div class="sermon-thumbnail">
             <img src="assets/Sermon-Thumbnail2.png" alt="Sermon thumbnail">
           </div>
@@ -130,7 +138,7 @@
           </div>
         </article>
 
-        <article class="sermon-card">
+        <article class="sermon-card" data-aos="fade-up" data-aos-delay="200">
           <div class="sermon-thumbnail">
             <img src="assets/Sermon-Thumbnail3.png" alt="Sermon thumbnail">
           </div>
@@ -177,5 +185,35 @@
       </div>
     </footer>
   </main>
+  <!-- AOS Library Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    if (menuToggle) {
+      menuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      // Close menu when a link is clicked
+      const navLinks = navMenu.querySelectorAll('a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          menuToggle.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
+    }
+
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100
+    });
+  </script>
 </body>
 </html>
