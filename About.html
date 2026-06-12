@@ -6,6 +6,8 @@
   <title>About · SCM LAUTECH</title>
   <link rel="icon" href="assets/SCM LOGO.jpg">
   <link rel="stylesheet" href="Homepage.css">
+  <!-- AOS Library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
   <header class="site-header">
@@ -14,11 +16,17 @@
         <span class="brand-mark"> <img src="assets/SCM LOGO.jpg" alt="SCM LAUTECH Logo"></span>
         SCM LAUTECH
       </div>
-      <nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="navMenu">
         <a href="index.html">Home</a>
         <a href="About.html" class="active">About</a>
         <a href="Sermons.html">Sermons</a>
         <a href="Give.html">Give</a>
+        <!-- <a href="#" class="button button-primary nav-cta">Join Us</a> -->
       </nav>
       <button class="action-button">Join Us</button>
     </div>
@@ -29,7 +37,7 @@
       <div class="hero-media">
         <img src="assets/Forest.png" alt="Campus sunrise background">
       </div>
-      <div class="container hero-inner">
+      <div class="container hero-inner" data-aos="fade-up">
         <span class="eyebrow">OUR JOURNEY</span>
         <h1 class="hero-title">Light, Love, and Spiritual<br>Maturity.</h1>
         <p class="hero-copy">Founded on the training by the Word and the Spirit, within the academic environment, SCM LAUTECH serves as a beacon of hope and spiritual growth for students.</p>
@@ -38,7 +46,7 @@
 
     <section class="section mission-vision">
       <div class="container cards-grid">
-        <article class="card mission-card">
+        <article class="card mission-card" data-aos="fade-right">
           <div class="icon-wrap">
             <img src="assets/Mission Icon.svg" alt="Mission icon">
           </div>
@@ -48,7 +56,7 @@
           <p>Oneness &#124 Christ centeredness &#124 Integrity and exemplary life &#124 Excellence &#124 Biblical discipleship &#124 Visionary servant leadership &#124 Continuous Learning.</p>
         </article>
 
-        <article class="card vision-card">
+        <article class="card vision-card" data-aos="fade-left">
           <div>
             <h2>Our Vision</h2>
             <p>We envision a Christ-centered motivated generation of students and leaders, biblically discipled, excelling in integrity and oneness.</p>
@@ -73,10 +81,10 @@
 
     <section class="section history-section">
       <div class="container history-grid">
-        <div class="history-image">
+        <div class="history-image" data-aos="fade-right">
           <img src="assets/Historical.png" alt="Historical campus scene">
         </div>
-        <div class="history-copy">
+        <div class="history-copy" data-aos="fade-left">
           <h2>A Brief Background</h2>
           <p>The Student Christian Movement (SCM) of LAUTECH is a local chapter of the Student Christian Movement of Nigeria, the Nigeria expression of the World Student Christian Federation (WSCF).</p>
           <p>The branch started 35 years ago by the effort of Elder John Ekpe, it had grown much more ever since into an active campus fellowship, participaring in outreaches within the state and amidst secondary school students. The fellowship places value on the Word of God and prayers as well as giving room to the Spirit of God in her meetings.</p>
@@ -92,17 +100,17 @@
       </div>
 
       <div class="container pillars-grid">
-        <article class="pillar-card">
+        <article class="pillar-card" data-aos="fade-up" data-aos-delay="0">
           <img src="assets/Word-Icon.svg" alt="Word-centered icon" class="pillar-icon">
           <h3>Word-Centered</h3>
           <p>Anchoring our faith and daily walk in the timeless truths of the Scripture.</p>
         </article>
-        <article class="pillar-card">
+        <article class="pillar-card" data-aos="fade-up" data-aos-delay="100">
           <img src="assets/Fellowship Icon.svg" alt="Fellowship icon" class="pillar-icon">
           <h3>Fellowship</h3>
           <p>Believers building relationships that encourage and sharpen one another.</p>
         </article>
-        <article class="pillar-card">
+        <article class="pillar-card" data-aos="fade-up" data-aos-delay="200">
           <img src="assets/Excellence icon.svg" alt="Excellence icon" class="pillar-icon">
           <h3>Excellence</h3>
           <p>Taking our faith into our sphere of influence, representing Christ in our pursuit.</p>
@@ -111,7 +119,7 @@
     </section>
 
     <section class="section cta-section">
-      <div class="container cta-inner">
+      <div class="container cta-inner" data-aos="zoom-in">
         <h2>Be Part of the Story</h2>
         <p>Whether you are a fresh student or an alumni looking to reconnect, there is always a place for you in SCM LAUTECH.</p>
         <div class="cta-actions">
@@ -135,5 +143,35 @@
       </div>
     </div>
   </footer>
+  <!-- AOS Library Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    if (menuToggle) {
+      menuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      // Close menu when a link is clicked
+      const navLinks = navMenu.querySelectorAll('a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          menuToggle.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
+    }
+
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100
+    });
+  </script>
 </body>
 </html>
